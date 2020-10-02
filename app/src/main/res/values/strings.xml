@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">AdoptApp</string>
+    <string name="AdoptApp">AdoptApp</string>
+    <string name="autores"><![CDATA[Made with love by Manu & David]]></string>
+    <string name="logo">applogo</string>
+    <string name="iniciarSesion">Iniciar sesión</string>
+    <string name="iniciosesion">Iniciar sesión en AdoptApp</string>
+    <string name="correo">Correo</string>
+    <string name="contrasena_login">Contraseña</string>
+    <string name="noRegistro">No tienes cuenta aún?</string>
+    <string name="registrarse">Regístrate</string>
+    <string name="iniciar_sesi_n_en_adoptapp">Iniciar sesión en AdoptApp</string>
+    <string name="fechaSeleccion">Seleccionar</string>
+    <string name="formulario">Formulario de registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="telefono">Teléfono</string>
+    <string name="fechaNacimientotext">Fecha de nacimiento</string>
+    <string name="lugarNacimiento">Lugar de nacimiento</string>
+    <string name="profesion">Profesión</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="repContrasena">Repita la contraseña</string>
+    <string name="condiciones">Aceptar términos y condiciones</string>
+    <string name="suscripcion">Desea recibir actualizaciones y noticias?</string>
+    <string name="registro">Registrarse</string>
+    <string name="actividades">¿A qué se dedica actualmente?</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+    <string-array name="lugar_nacimiento">
+        <item>Seleccione una ciudad</item>
+        <item>Medellín</item>
+        <item>Bogotá</item>
+        <item>Barranquilla</item>
+        <item>Bucaramanga</item>
+        <item>Cali</item>
+        <item>Cúcuta</item>
+        <item>Ibagué</item>
+        <item>Santa Marta</item>
+        <item>Manizales</item>
+        <item>Pereira</item>
+        <item>Montería</item>
+        <item>Pasto</item>
+    </string-array>
+
+    <string-array name="actividades">
+        <item>Seleccione una </item>
+        <item>Trabajo</item>
+        <item>Estudio</item>
+        <item>Ninguna de las anteriores</item>
+    </string-array>
+</resources>
