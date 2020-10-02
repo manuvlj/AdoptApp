@@ -3,8 +3,8 @@ package com.manudavid.adoptapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_registro.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,15 +12,29 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         getSupportActionBar()?.hide();
 
-        registrarse_button.setOnClickListener(){
-            val intent = Intent( this, RegistroActivity::class.java)
-            intent.putExtra("numero", 1)
-            startActivity(intent)
-            finish()
+        login_button.setOnClickListener {
+
+            val datosRegistro = intent.extras
+            val correoRegistro = intent.getStringExtra("correo")
+            val conRegistro = intent.getStringExtra("contrasena")
+            val correoLogin = email_text.text.toString()
+            val contrasenaLogin = contrasenaRegistro_text.text.toString()
+
+
+            if ((correoRegistro == correoLogin)){
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("correo", correoLogin)
+                startActivity(intent)
+                finish()
+            }
+            else{
+                mensajeError.setText("$correoRegistro")
+            }
+
         }
 
-        login_button.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        registrarse_button.setOnClickListener(){
+            val intent = Intent( this, RegistroActivity::class.java)
             startActivity(intent)
             finish()
         }
