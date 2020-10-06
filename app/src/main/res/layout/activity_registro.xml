@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/telefonoRegistro_text" />
 
     <EditText
-        android:id="@+id/contrasena_text"
+        android:id="@+id/contrasenaRegistro_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -146,7 +146,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contrasena_text" />
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaRegistro_text" />
 
     <TextView
         android:id="@+id/fechaNacimiento_text"
@@ -195,7 +195,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fechaNacimiento_button" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/ciudad_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -220,10 +220,10 @@
         android:text="@string/actividades"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/ciudad_spinner" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/ocupacion_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -233,6 +233,7 @@
         android:layout_marginRight="16dp"
         android:entries="@array/actividades"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profesion_text" />
 
@@ -249,10 +250,10 @@
         android:text="@string/condiciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/ocupacion_spinner" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/noticias_checkBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -268,11 +269,12 @@
 
     <Button
         android:id="@+id/registro_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorAccent"
@@ -281,7 +283,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/noticias_checkBox" />
 
     <ImageView
         android:id="@+id/logo"
@@ -294,6 +296,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_button"
         app:srcCompat="@drawable/logo_black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="@string/errorTexto"
+        android:textColor="#B63939"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/noticias_checkBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

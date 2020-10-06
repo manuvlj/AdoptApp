@@ -25,6 +25,15 @@
     <string name="registro">Registrarse</string>
     <string name="actividades">¿A qué se dedica actualmente?</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="contrasena_registro">Contraseña</string>
+    <string name="mensaje_error" />
+    <string name="correoMain" />
+    <string name="errorTexto" />
+    <string name="respuesta">Nombre: %s \nApellidos %s \nTeléfono: %s \nCorreo: %s \nLugar de Nacimiento: %s /n Ocupación: %s</string>
+    <string name="error1">Usted no ingresó todos los datos</string>
+    <string name="error2">Las contraseñas no coinciden</string>
+    <string name="error3">La contraseña debe tener mínimo seis (6) caracteres</string>
+    <string name="error4">No aceptó términos y condiciones</string>
 
     <string-array name="lugar_nacimiento">
         <item>Seleccione una ciudad</item>
@@ -43,7 +52,7 @@
     </string-array>
 
     <string-array name="actividades">
-        <item>Seleccione una </item>
+        <item>Seleccione una opción</item>
         <item>Trabajo</item>
         <item>Estudio</item>
         <item>Ninguna de las anteriores</item>

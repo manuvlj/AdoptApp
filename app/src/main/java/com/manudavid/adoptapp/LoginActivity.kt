@@ -21,14 +21,16 @@ class LoginActivity : AppCompatActivity() {
             val contrasenaLogin = contrasenaRegistro_text.text.toString()
 
 
-            if ((correoRegistro == correoLogin)){
+            if ((correoRegistro == correoLogin)&&(conRegistro == contrasenaLogin)){
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("correo", correoLogin)
+                intent.putExtra("contrasena", contrasenaLogin)
                 startActivity(intent)
-                finish()
+
             }
+
             else{
-                mensajeError.setText("$correoRegistro")
+                mensajeError.setText("Los datos son incorrectos")
             }
 
         }
@@ -39,5 +41,11 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -7,12 +7,21 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.AbsListView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_registro.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val correoRegistro = intent.getStringExtra("correo")
+        val contrasenaRegistro = intent.getStringExtra("contrasena")
+
+        correoMain_text.setText("Su correo es: $correoRegistro")
 
     }
 
@@ -25,9 +34,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
+        val correoRegistro = intent.getStringExtra("correo")
+        val contrasenaRegistro = intent.getStringExtra("contrasena")
+
         return when (item.itemId) {
+
             R.id.cerrar_sesion -> {
-                Toast.makeText(this, "Sesion cerrada", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.putExtra("correo", correoRegistro)
+                    intent.putExtra("contrasena", contrasenaRegistro)
+                    startActivity(intent)
+                    finish()
+
+                Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_LONG).show()
                 true
             }
 
@@ -35,11 +54,16 @@ class MainActivity : AppCompatActivity() {
                 return super.onOptionsItemSelected(item)
             }
         }
+
     }
 
     override fun onBackPressed() {
+        val correoRegistro = intent.getStringExtra("correo")
+        val contrasenaRegistro = intent.getStringExtra("contrasena")
         super.onBackPressed()
         val intent = Intent(this, LoginActivity::class.java)
+        intent.putExtra("correo", correoRegistro)
+        intent.putExtra("contrasena", contrasenaRegistro)
         startActivity(intent)
         finish()
     }
