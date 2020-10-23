@@ -1,25 +1,25 @@
-package com.manudavid.adoptapp
+package com.manudavid.adoptapp.ui.main
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.AbsListView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_login.*
+import com.manudavid.adoptapp.R
+import com.manudavid.adoptapp.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_registro.*
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val correoRegistro = intent.getStringExtra("correo")
-        val contrasenaRegistro = intent.getStringExtra("contrasena")
+        //val contrasenaRegistro = intent.getStringExtra("contrasena")
 
         correoMain_text.setText("Su correo es: $correoRegistro")
 
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean{
         val inflater = menuInflater
-        inflater.inflate(R.menu.my_menu, menu)
+        inflater.inflate(R.menu.menu, menu)
 
         return true
     }
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         return when (item.itemId) {
 
-            R.id.cerrar_sesion -> {
+            R.id.nav_cerrarSesion -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     intent.putExtra("correo", correoRegistro)
                     intent.putExtra("contrasena", contrasenaRegistro)

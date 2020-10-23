@@ -1,10 +1,11 @@
-package com.manudavid.adoptapp
+package com.manudavid.adoptapp.ui.datepicker
 
 import android.app.*
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.DatePicker
 import android.widget.Toast
+import com.manudavid.adoptapp.R
 import java.text.DateFormat
 import java.util.Calendar
 

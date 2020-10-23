@@ -1,9 +1,10 @@
-package com.manudavid.adoptapp
+package com.manudavid.adoptapp.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
+import com.manudavid.adoptapp.R
+import com.manudavid.adoptapp.ui.login.LoginActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 

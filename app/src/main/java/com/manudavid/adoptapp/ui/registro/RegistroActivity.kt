@@ -1,9 +1,12 @@
-package com.manudavid.adoptapp
+package com.manudavid.adoptapp.ui.registro
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.manudavid.adoptapp.ui.datepicker.DatePickerFragment
+import com.manudavid.adoptapp.R
+import com.manudavid.adoptapp.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_registro.*
 
 class RegistroActivity : AppCompatActivity() {
@@ -57,8 +60,11 @@ class RegistroActivity : AppCompatActivity() {
                     val intent = Intent(this, LoginActivity::class.java)
                     intent.putExtra("correo", correo)
                     intent.putExtra("contrasena", contrasena)
+                    intent.putExtra("nombre", nombre)
                     startActivity(intent)
                     finish()
+
+
                 }
             }
 
@@ -66,7 +72,8 @@ class RegistroActivity : AppCompatActivity() {
 
         fechaNacimiento_button.setOnClickListener{
             // Initialize a new DatePickerFragment
-            val newFragment = DatePickerFragment()
+            val newFragment =
+                DatePickerFragment()
             // Show the date picker dialog
             newFragment.show(fragmentManager, "Date Picker")
         }

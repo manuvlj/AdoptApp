@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_inicio"
+                    android:icon="@drawable/ic_menu_inicio"
+                    android:title="@string/inicio" />
+                <item
+                    android:id="@+id/nav_adoptar"
+                    android:icon="@drawable/ic_menu_huella"
+                    android:title="@string/adoptar" />
+                <item
+                    android:id="@+id/nav_darAdopcion"
+                    android:icon="@drawable/ic_menu_huella"
+                    android:title="@string/darAdopcion" />
+                <item
+                    android:id="@+id/nav_hogarTemp"
+                    android:icon="@drawable/ic_menu_huella"
+                    android:title="@string/hogarTemporal" />
+                <item
+                    android:id="@+id/nav_voluntarios"
+                    android:icon="@drawable/ic_menu_huella"
+                    android:title="@string/voluntarios" />
+                <item
+                    android:id="@+id/nav_miPerfil"
+                    android:icon="@drawable/ic_menu_miperfil"
+                    android:title="@string/miPerfil" />
+                <item
+                    android:id="@+id/nav_cerrarSesion"
+                    android:icon="@drawable/ic_menu_cerrarsesion"
+                    android:title="@string/cerrar_sesion"
+                    app:showAsAction="never" />
+        </group>
+
+</menu>
