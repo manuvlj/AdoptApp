@@ -30,9 +30,9 @@ class RegistroActivity : AppCompatActivity() {
         Log.d("Método", "onCreate")
 
         registro_button.setOnClickListener {
-            val nombre= nombreRegistro_text.text.toString()
+            val nombre= nombre_header.text.toString()
             val apellido = apellidoRegistro_text.text.toString()
-            val correo = correoRegistro_text.text.toString()
+            val correo = correo_header.text.toString()
             val telefono = telefonoRegistro_text.text.toString()
             val contrasena = contrasenaRegistro_text.text.toString()
             val repContrasena = repContrasena_text.text.toString()
@@ -42,18 +42,18 @@ class RegistroActivity : AppCompatActivity() {
 
 
             if(nombre == EMPTY || correo == EMPTY || contrasena == EMPTY || repContrasena == EMPTY || telefono == EMPTY || ciudad == EMPTY || ocupacion == EMPTY){
-                textView.text =getString(R.string.error1)
+                darAdopcion_textView.text =getString(R.string.error1)
             }
 
             else{
                 if (contrasena != repContrasena)
-                    textView.text = getString(R.string.error2)
+                    darAdopcion_textView.text = getString(R.string.error2)
 
                 else if(contrasena.length < 6)
-                    textView.text =getString(R.string.error3)
+                    darAdopcion_textView.text =getString(R.string.error3)
 
                 else if(!condiciones_checkBox.isChecked)
-                        textView.text = getString(R.string.error4)
+                        darAdopcion_textView.text = getString(R.string.error4)
 
                 else {
 

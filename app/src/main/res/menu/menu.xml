@@ -29,11 +29,6 @@
                     android:id="@+id/nav_miPerfil"
                     android:icon="@drawable/ic_menu_miperfil"
                     android:title="@string/miPerfil" />
-                <item
-                    android:id="@+id/nav_cerrarSesion"
-                    android:icon="@drawable/ic_menu_cerrarsesion"
-                    android:title="@string/cerrar_sesion"
-                    app:showAsAction="never" />
         </group>
 
 </menu>

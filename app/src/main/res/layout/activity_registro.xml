@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nombreRegistro_text"
+        android:id="@+id/nombre_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -70,7 +70,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreRegistro_text" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_header" />
 
     <EditText
         android:id="@+id/telefonoRegistro_text"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/apellidoRegistro_text" />
 
     <EditText
-        android:id="@+id/correoRegistro_text"
+        android:id="@+id/correo_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -127,7 +127,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correoRegistro_text" />
+        app:layout_constraintTop_toBottomOf="@+id/correo_header" />
 
     <EditText
         android:id="@+id/repContrasena_text"
@@ -274,7 +274,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorAccent"
@@ -298,7 +298,7 @@
         app:srcCompat="@drawable/logo_black" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/darAdopcion_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"

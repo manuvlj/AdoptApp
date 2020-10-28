@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AdoptApp</string>
     <string name="AdoptApp">AdoptApp</string>
-    <string name="autores"><![CDATA[Made with love by Manu & David]]></string>
+    <string name="autores"><![CDATA[Made with love by Manu]]></string>
     <string name="logo">applogo</string>
     <string name="iniciarSesion">Iniciar sesión</string>
     <string name="iniciosesion">Iniciar sesión en AdoptApp</string>
@@ -77,4 +77,10 @@
     <string name="darAdopcion">Dar en adopción</string>
     <string name="adoptar">Adoptar</string>
     <string name="inicio">Inicio</string>
+    <string name="funcionAdoptar">"En este fragmento se encontrarán las fotos de los perros disponibles para adopción con su información "</string>
+    <string name="darAdopciondescripcion">En este fragmento se encuentra un formulario que se deberá llenar para poner un perro en adopción y poder ser revisado por los administradores</string>
+    <string name="darHogarDescripcion">"En este fragmento se encontrará un formulario donde se dirá cuántos perros está dispuesta a aceptar la persona "</string>
+    <string name="inicioDescripcion">Aquí se encontrarán artículos y noticias sobre el cuidado de los perros</string>
+    <string name="perfilDescripcion">Aquí se encontrarán los datos de la persona los cuales se podrán cambiar al igual que la contraseña</string>
+    <string name="voluntariosDescripcion">"Este fragmento será para los que deseen ser voluntarios, llenen un formulario para poder ser tenidos en cuenta y también se podrán ver los albergues más cercanos "</string>
 </resources>

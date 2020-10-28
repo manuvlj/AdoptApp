@@ -3,7 +3,6 @@ package com.manudavid.adoptapp.ui.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.manudavid.adoptapp.ui.main.MainActivity
 import com.manudavid.adoptapp.R
 import com.manudavid.adoptapp.ui.drawer.DrawerActivity
 import com.manudavid.adoptapp.ui.registro.RegistroActivity

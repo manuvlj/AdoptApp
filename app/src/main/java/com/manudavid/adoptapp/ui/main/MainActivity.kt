@@ -18,43 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val correoRegistro = intent.getStringExtra("correo")
-        //val contrasenaRegistro = intent.getStringExtra("contrasena")
-
-        correoMain_text.setText("Su correo es: $correoRegistro")
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean{
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu, menu)
-
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        val correoRegistro = intent.getStringExtra("correo")
-        val contrasenaRegistro = intent.getStringExtra("contrasena")
-
-        return when (item.itemId) {
-
-            R.id.nav_cerrarSesion -> {
-                    val intent = Intent(this, LoginActivity::class.java)
-                    intent.putExtra("correo", correoRegistro)
-                    intent.putExtra("contrasena", contrasenaRegistro)
-                    startActivity(intent)
-                    finish()
-
-                Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_LONG).show()
-                true
-            }
-
-            else -> {
-                return super.onOptionsItemSelected(item)
-            }
-        }
-
     }
 
     override fun onBackPressed() {

@@ -6,10 +6,10 @@
     android:orientation="vertical"
     tools:context=".ui.daradopcion.DarAdopcionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/darAdopcion_textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_height="wrap_content"
+        android:text="@string/darAdopciondescripcion"
+        android:textSize="30sp" />
 </LinearLayout>
