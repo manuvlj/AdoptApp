@@ -1,11 +1,11 @@
-package com.manudavid.adoptapp.ui.login
+package com.manuelarestrepo.adoptapp.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.manudavid.adoptapp.R
-import com.manudavid.adoptapp.ui.drawer.DrawerActivity
-import com.manudavid.adoptapp.ui.registro.RegistroActivity
+import com.manuelarestrepo.adoptapp.R
+import com.manuelarestrepo.adoptapp.ui.drawer.DrawerActivity
+import com.manuelarestrepo.adoptapp.ui.registro.RegistroActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
                 intent.putExtra("contrasena", contrasenaLogin)
                 intent.putExtra("nombre", nombreRegistro)
                 startActivity(intent)
+                //Prueba
 
             }
 
