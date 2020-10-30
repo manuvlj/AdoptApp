@@ -1,13 +1,13 @@
-package com.manudavid.adoptapp.ui.voluntarios
+package com.manuelarestrepo.adoptapp.ui.daradopcion
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.manudavid.adoptapp.R
+import androidx.fragment.app.Fragment
+import com.manuelarestrepo.adoptapp.R
 
-class VoluntariosFragment : Fragment() {
+class DarAdopcionFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,10 +15,8 @@ class VoluntariosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_voluntarios, container, false)
+        return inflater.inflate(R.layout.fragment_dar_adopcion, container, false)
     }
 
-    companion object {
-
-    }
+    companion object
 }

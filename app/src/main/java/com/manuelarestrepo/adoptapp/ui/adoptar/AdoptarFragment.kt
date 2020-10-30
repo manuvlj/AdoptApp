@@ -1,11 +1,11 @@
-package com.manudavid.adoptapp.ui.adoptar
+package com.manuelarestrepo.adoptapp.ui.adoptar
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.manudavid.adoptapp.R
+import androidx.fragment.app.Fragment
+import com.manuelarestrepo.adoptapp.R
 
 class AdoptarFragment : Fragment() {
 
@@ -17,11 +17,5 @@ class AdoptarFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_adoptar, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-    companion object {
-
-    }
+    companion object
 }

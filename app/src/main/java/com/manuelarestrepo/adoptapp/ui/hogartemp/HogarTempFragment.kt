@@ -1,17 +1,13 @@
-package com.manudavid.adoptapp.ui.hogartemp
+package com.manuelarestrepo.adoptapp.ui.hogartemp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.manudavid.adoptapp.R
+import androidx.fragment.app.Fragment
+import com.manuelarestrepo.adoptapp.R
 
 class HogarTempFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,11 +17,5 @@ class HogarTempFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_hogar_temp, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-    companion object {
-
-    }
+    companion object
 }

@@ -1,4 +1,4 @@
-package com.manudavid.adoptapp.ui.drawer
+package com.manuelarestrepo.adoptapp.ui.drawer
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,8 +15,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.manudavid.adoptapp.R
-import com.manudavid.adoptapp.ui.login.LoginActivity
+import com.manuelarestrepo.adoptapp.R
+import com.manuelarestrepo.adoptapp.ui.login.LoginActivity
 
 class DrawerActivity : AppCompatActivity() {
 
@@ -26,7 +26,7 @@ class DrawerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drawer)
-        getSupportActionBar()?.hide();
+        supportActionBar?.hide()
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)

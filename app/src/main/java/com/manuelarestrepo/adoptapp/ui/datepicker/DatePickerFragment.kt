@@ -1,13 +1,15 @@
-package com.manudavid.adoptapp.ui.datepicker
+package com.manuelarestrepo.adoptapp.ui.datepicker
 
-import android.app.*
+import android.app.DatePickerDialog
+import android.app.Dialog
+import android.app.DialogFragment
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.DatePicker
+import android.widget.TextView
 import android.widget.Toast
-import com.manudavid.adoptapp.R
+import com.manuelarestrepo.adoptapp.R
 import java.text.DateFormat
-import java.util.Calendar
+import java.util.*
 
 
 class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
@@ -39,12 +41,13 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
     override fun onDateSet(view: DatePicker, year: Int, month: Int, day: Int) {
         Toast.makeText(
             activity,
-            "Fecha seleccionada: ${formatDate(year,month,day)}"
-            ,Toast.LENGTH_SHORT
+            "Fecha seleccionada: ${formatDate(year, month, day)}"
+            , Toast.LENGTH_SHORT
         ).show()
 
         // Display the selected date in text view
-        activity.findViewById<TextView>(R.id.fechaNacimiento_button).setText(formatDate(year, month, day))
+        activity.findViewById<TextView>(R.id.fechaNacimiento_button).text =
+            formatDate(year, month, day)
     }
 
 

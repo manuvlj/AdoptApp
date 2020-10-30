@@ -1,11 +1,11 @@
-package com.manudavid.adoptapp.ui.miperfil
+package com.manuelarestrepo.adoptapp.ui.miperfil
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.manudavid.adoptapp.R
+import androidx.fragment.app.Fragment
+import com.manuelarestrepo.adoptapp.R
 
 class Miperfil : Fragment() {
 
@@ -17,7 +17,5 @@ class Miperfil : Fragment() {
         return inflater.inflate(R.layout.fragment_miperfil, container, false)
     }
 
-    companion object {
-
-    }
+    companion object
 }

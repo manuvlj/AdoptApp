@@ -7,32 +7,32 @@
 
     <fragment
         android:id="@+id/nav_adoptar"
-        android:name="com.manudavid.adoptapp.ui.adoptar.AdoptarFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.adoptar.AdoptarFragment"
         android:label="Adoptar"
         tools:layout="@layout/fragment_adoptar" />
     <fragment
         android:id="@+id/nav_darAdopcion"
-        android:name="com.manudavid.adoptapp.ui.daradopcion.DarAdopcionFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.daradopcion.DarAdopcionFragment"
         android:label="Dar en adopción"
         tools:layout="@layout/fragment_dar_adopcion" />
     <fragment
         android:id="@+id/nav_hogarTemp"
-        android:name="com.manudavid.adoptapp.ui.hogartemp.HogarTempFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.hogartemp.HogarTempFragment"
         android:label="Dar hogar temporal"
         tools:layout="@layout/fragment_hogar_temp" />
     <fragment
         android:id="@+id/nav_inicio"
-        android:name="com.manudavid.adoptapp.ui.inicio.InicioFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.inicio.InicioFragment"
         android:label="Inicio"
         tools:layout="@layout/fragment_inicio" />
     <fragment
         android:id="@+id/nav_voluntarios"
-        android:name="com.manudavid.adoptapp.ui.voluntarios.VoluntariosFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.voluntarios.VoluntariosFragment"
         android:label="Voluntarios"
         tools:layout="@layout/fragment_voluntarios" />
     <fragment
         android:id="@+id/nav_miPerfil"
-        android:name="com.manudavid.adoptapp.ui.miperfil.Miperfil"
+        android:name="com.manuelarestrepo.adoptapp.ui.miperfil.Miperfil"
         android:label="Mi perfil"
         tools:layout="@layout/fragment_miperfil" />
 </navigation>
