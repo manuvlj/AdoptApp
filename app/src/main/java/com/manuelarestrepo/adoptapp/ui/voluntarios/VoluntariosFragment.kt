@@ -9,7 +9,6 @@ import com.manuelarestrepo.adoptapp.R
 
 class VoluntariosFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,5 +17,4 @@ class VoluntariosFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_voluntarios, container, false)
     }
 
-    companion object
 }
