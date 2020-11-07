@@ -1,15 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.daradopcion.DarAdopcionFragment">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/darAdopcion_textView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/darAdopciondescripcion"
-        android:textSize="30sp" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.daradopcion.DarAdopcionFragment">
+
+        <TextView
+            android:id="@+id/aviso_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/aviso_darAdopcion"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/datosPropietario_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/datosPropietario"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nombre_dar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombre_dar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/apellido_dar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/apellido_dar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/apellido"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correo_dar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/correo_dar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/datosPerro_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/datosPerro"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nombrePerro_dar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombrePerro_dar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edadPerro_dar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edadPerro_dar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/edadPerro_dar"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tamano_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/tamanoPerro_dar"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Spinner
+            android:id="@+id/tamano_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/Tamano" />
+
+        <TextView
+            android:id="@+id/sexoPerro_dar_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sexoPerro_dar"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/hembra_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hembra" />
+
+            <RadioButton
+                android:id="@+id/macho_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/macho" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/esterilizado_dar_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/esterilizado"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/si_esterili_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/si" />
+
+            <RadioButton
+                android:id="@+id/no_esterili_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/vacunas_dar_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/vacunas"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/si_vacunas_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/si" />
+
+            <RadioButton
+                android:id="@+id/no_vacunas_radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/inserteFoto_dar_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/fotoPerro_dar"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/fotoPerro_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="@string/elegir"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/justificacion_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/justificacionTextView"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/justificacion_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/justificacion"
+            android:importantForAutofill="no"
+            android:inputType="textLongMessage|textMultiLine"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/enviar_dar_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="@string/enviarFormulario_dar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="83dp"
+            android:layout_height="92dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:contentDescription="@string/logo"
+            android:foregroundGravity="center"
+            android:padding="0dp"
+            android:src="@drawable/logo_black" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

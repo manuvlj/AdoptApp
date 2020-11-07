@@ -83,4 +83,31 @@
     <string name="inicioDescripcion">Aquí se encontrarán artículos y noticias sobre el cuidado de los perros</string>
     <string name="perfilDescripcion">Aquí se encontrarán los datos de la persona los cuales se podrán cambiar al igual que la contraseña</string>
     <string name="voluntariosDescripcion">"Este fragmento será para los que deseen ser voluntarios, llenen un formulario para poder ser tenidos en cuenta y también se podrán ver los albergues más cercanos "</string>
+    <string name="aviso_darAdopcion">¡Atención! Tenga en cuenta que llenar el formulario no significa que el perro haya sido aceptado. Una vez llene el formulario debe esperar al menos 72 horas a que su petición sea respondida. </string>
+    <string name="datosPropietario">Datos del propietario</string>
+    <string name="datosPerro">Datos del perro</string>
+    <string name="edadPerro_dar">Edad</string>
+    <string name="tamanoPerro_dar">Tamaño</string>
+    <string name="sexoPerro_dar">Sexo</string>
+    <string name="hembra">Hembra</string>
+    <string name="macho">Macho</string>
+    <string name="esterilizado">Esterilizado</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+    <string name="vacunas">Vacunas al día</string>
+    <string name="fotoPerro_dar">Foto del perro</string>
+    <string name="elegir">Elija una foto</string>
+    <string name="justificacion">Escriba por qué desea dar el perro en adopción. No omita detalles.</string>
+    <string name="justificacionTextView">Justificación</string>
+    <string name="enviarFormulario_dar">Enviar Formulario</string>
+    <string name="inscrir_voluntarios">Llena el formulario y sé voluntario</string>
+    <string name="albuergues">Mira los albergues más cercanos</string>
+    <string name="imgVoluntario">imgVoluntario</string>
+    <string name="textoVoluntarios">Ayuda a los animales que han quedado desamparados y ofrecerles una segunda oportunidad, una nueva vida que les colme del afecto que les fue negado por quienes les maltrataron y abandonaron.</string>
+
+    <string-array name="Tamano">
+        <item>Pequeño</item>
+        <item>Mediano</item>
+        <item>Grande</item>
+    </string-array>
 </resources>

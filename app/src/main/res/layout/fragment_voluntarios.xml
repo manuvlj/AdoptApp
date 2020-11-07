@@ -1,15 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.voluntarios.VoluntariosFragment" >
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/volunt_textView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/voluntariosDescripcion"
-        android:textSize="30sp" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.voluntarios.VoluntariosFragment">
+
+        <ImageView
+            android:id="@+id/voluntario_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/imgVoluntario"
+            app:srcCompat="@drawable/voluntario" />
+
+        <TextView
+            android:id="@+id/texto_voluntarios_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:padding="15dp"
+            android:text="@string/textoVoluntarios"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/inscribete_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="@string/inscrir_voluntarios"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="@string/albuergues"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="86dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/logo"
+            app:srcCompat="@drawable/logo_black" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
