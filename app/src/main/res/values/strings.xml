@@ -104,6 +104,9 @@
     <string name="albuergues">Mira los albergues más cercanos</string>
     <string name="imgVoluntario">imgVoluntario</string>
     <string name="textoVoluntarios">Ayuda a los animales que han quedado desamparados y ofrecerles una segunda oportunidad, una nueva vida que les colme del afecto que les fue negado por quienes les maltrataron y abandonaron.</string>
+    <string name="titulo_formVoluntarios">Formulario para Voluntarios</string>
+    <string name="aviso_formularioVol">Al llenar este formulario usted está aceptando el tratamiento de sus datos. Se le enviará un correo con los albuergues más cercanos a su ubicación junto con toda la información que pueda necesitar.</string>
+    <string name="direccionResidencia">Dirección de residencia</string>
 
     <string-array name="Tamano">
         <item>Pequeño</item>
