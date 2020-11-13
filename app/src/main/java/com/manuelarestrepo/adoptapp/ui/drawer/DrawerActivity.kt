@@ -15,6 +15,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import com.manuelarestrepo.adoptapp.R
 import com.manuelarestrepo.adoptapp.ui.login.LoginActivity
 
@@ -73,18 +74,13 @@ class DrawerActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val correoRegistro = intent.getStringExtra("correo")
-        val contrasenaRegistro = intent.getStringExtra("contrasena")
-
         return when (item.itemId) {
 
             R.id.cerrar_sesion -> {
+                val auth = FirebaseAuth.getInstance().signOut()
                 val intent = Intent(this, LoginActivity::class.java)
-                intent.putExtra("correo", correoRegistro)
-                intent.putExtra("contrasena", contrasenaRegistro)
                 startActivity(intent)
                 finish()
-
                 Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_LONG).show()
                 true
             }

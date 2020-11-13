@@ -2,21 +2,23 @@ package com.manuelarestrepo.adoptapp.ui.registro
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.manuelarestrepo.adoptapp.AdoptApp
+import com.google.firebase.auth.FirebaseAuth
 import com.manuelarestrepo.adoptapp.R
-import com.manuelarestrepo.adoptapp.data.database.dao.UsuarioDAO
-import com.manuelarestrepo.adoptapp.data.database.entities.Usuario
 import com.manuelarestrepo.adoptapp.ui.datepicker.DatePickerFragment
 import com.manuelarestrepo.adoptapp.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_registro.*
-import java.sql.Types.NULL
 
 class RegistroActivity : AppCompatActivity() {
 
-    companion object{
+    private lateinit var auth: FirebaseAuth
+
+    companion object {
         private const val EMPTY = ""
         private const val SPACE = " "
+        private val TAG = RegistroActivity::class.simpleName
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +26,7 @@ class RegistroActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registro)
         supportActionBar?.hide()
 
+        auth = FirebaseAuth.getInstance()
 
         registro_button.setOnClickListener {
             val nombre= nombre_header.text.toString()
@@ -49,29 +52,14 @@ class RegistroActivity : AppCompatActivity() {
                         darAdopcion_textView.text = getString(R.string.error4)
 
                 else {
-                    val usuario = Usuario(
-                        NULL,
-                        nombre,
-                        apellido,
-                        telefono,
-                        correo,
-                        ciudad,
-                        "hola",
-                        contrasena
-                    )
-                    val usuarioDAO: UsuarioDAO = AdoptApp.usuariodatabase.UsuarioDAO()
-                    usuarioDAO.insertUsuario(usuario)
-
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    registroEnFirebase(correo, contrasena)
                 }
             }
 
 
         }
 
-        fechaNacimiento_button.setOnClickListener{
+        fechaNacimiento_button.setOnClickListener {
             // Initialize a new DatePickerFragment
             val newFragment =
                 DatePickerFragment()
@@ -80,6 +68,27 @@ class RegistroActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun registroEnFirebase(correo: String, contrasena: String) {
+        auth.createUserWithEmailAndPassword(correo, contrasena)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "createUserWithEmail:success")
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this, LoginActivity::class.java)

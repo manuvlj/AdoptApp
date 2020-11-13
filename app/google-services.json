@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "550514087290",
+    "firebase_url": "https://adoptapp-79494.firebaseio.com",
+    "project_id": "adoptapp-79494",
+    "storage_bucket": "adoptapp-79494.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550514087290:android:abce08e57595c0028cf2c3",
+        "android_client_info": {
+          "package_name": "com.manudavid.adoptapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550514087290-qu56f1c68j771f8gpllklbiq54dqh5b2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEawZr6MycUQALM67gAnaLGO97vWmv1YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550514087290-qu56f1c68j771f8gpllklbiq54dqh5b2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

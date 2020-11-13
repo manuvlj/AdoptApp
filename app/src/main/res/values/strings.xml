@@ -107,6 +107,7 @@
     <string name="titulo_formVoluntarios">Formulario para Voluntarios</string>
     <string name="aviso_formularioVol">Al llenar este formulario usted está aceptando el tratamiento de sus datos. Se le enviará un correo con los albuergues más cercanos a su ubicación junto con toda la información que pueda necesitar.</string>
     <string name="direccionResidencia">Dirección de residencia</string>
+    <string name="envio_formulario_voluntarios">Enviar formulario</string>
 
     <string-array name="Tamano">
         <item>Pequeño</item>
