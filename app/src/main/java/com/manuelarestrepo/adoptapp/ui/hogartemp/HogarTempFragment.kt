@@ -24,7 +24,7 @@ class HogarTempFragment : Fragment() {
             val nombreHogar = binding.nombreHogarEditText.text.toString()
             val apellidoHogar = binding.apellidosHogarEditText.text.toString()
             val telefonoHogar = binding.telefonoHogarEditText.text.toString().toInt()
-            val correoHogar = binding.correoHogarEditText.toString()
+            val correoHogar = binding.correoHogarEditText.text.toString()
             val ciudadHogar = binding.ciudadHogarSpinner.selectedItem.toString()
             val direccionHogar = binding.direccionHogarEditText.text.toString()
             val numPerrosHogar = binding.cantidadPerrosEditText.text.toString().toInt()
