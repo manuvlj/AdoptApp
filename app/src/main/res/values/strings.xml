@@ -111,6 +111,8 @@
     <string name="ciudad">Ciudad</string>
     <string name="numeroPerros">Cantidad de perros que puede ayudar</string>
     <string name="experiencia">¿Cuenta con experiencia con el cuidado de perros?</string>
+    <string name="perro_image">Perro Image</string>
+    <string name="ver_mas">Conoce más sobre mí</string>
 
     <string-array name="Tamano">
         <item>Pequeño</item>

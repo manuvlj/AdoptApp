@@ -6,7 +6,9 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.manuelarestrepo.adoptapp.R
+import com.manuelarestrepo.adoptapp.data.server.Usuario
 import com.manuelarestrepo.adoptapp.ui.datepicker.DatePickerFragment
 import com.manuelarestrepo.adoptapp.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_registro.*
@@ -36,7 +38,7 @@ class RegistroActivity : AppCompatActivity() {
             val contrasena = contrasenaRegistro_text.text.toString()
             val repContrasena = repContrasena_text.text.toString()
             val ciudad = ciudad_spinner.selectedItem.toString()
-            val ocupacion = ocupacion_spinner.selectedItem
+            val ocupacion = ocupacion_spinner.selectedItem.toString()
             val noticias = noticias_checkBox.isChecked.toString()
 
 
@@ -52,7 +54,15 @@ class RegistroActivity : AppCompatActivity() {
                         darAdopcion_textView.text = getString(R.string.error4)
 
                 else {
-                    registroEnFirebase(correo, contrasena)
+                    registroEnFirebase(
+                        nombre,
+                        apellido,
+                        telefono,
+                        correo,
+                        contrasena,
+                        ciudad,
+                        ocupacion
+                    )
                 }
             }
 
@@ -69,15 +79,31 @@ class RegistroActivity : AppCompatActivity() {
 
     }
 
-    private fun registroEnFirebase(correo: String, contrasena: String) {
+    private fun registroEnFirebase(
+        nombre: String,
+        apellido: String,
+        telefono: String,
+        correo: String,
+        contrasena: String,
+        ciudad: String,
+        ocupacion: String
+    ) {
         auth.createUserWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    val uid = auth.currentUser?.uid
+                    crearUsuarioEnBaseDeDatos(
+                        uid,
+                        nombre,
+                        apellido,
+                        telefono,
+                        correo,
+                        ciudad,
+                        ocupacion
+                    )
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -87,6 +113,28 @@ class RegistroActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+    }
+
+    private fun crearUsuarioEnBaseDeDatos(
+        uid: String?,
+        nombre: String,
+        apellido: String,
+        telefono: String,
+        correo: String,
+        ciudad: String,
+        ocupacion: String
+    ) {
+        val database = FirebaseDatabase.getInstance()
+        val myUsersReference = database.getReference("usuarios")
+        val usuario = Usuario(uid, nombre, apellido, telefono, correo, ciudad, ocupacion)
+        uid?.let { myUsersReference.child(uid).setValue(usuario) }
+        goToLoginActivity()
+    }
+
+    private fun goToLoginActivity() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun onBackPressed() {
