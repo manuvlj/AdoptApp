@@ -14,6 +14,7 @@ class FormularioVoluntariosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulario_voluntarios)
+        supportActionBar?.hide()
 
         enviar_formulario_button.setOnClickListener {
             val nombre = nombre_voluntario_edit_text.text.toString()
@@ -43,7 +44,7 @@ class FormularioVoluntariosActivity : AppCompatActivity() {
             myVoluntariosRef.child(it).setValue(voluntario)
         }
         Toast.makeText(
-            baseContext, "Voluntario registrado",
+            baseContext, "Formulario enviado. ¡Gracias por ayudar!",
             Toast.LENGTH_SHORT
         ).show()
         goToDraweActivity()

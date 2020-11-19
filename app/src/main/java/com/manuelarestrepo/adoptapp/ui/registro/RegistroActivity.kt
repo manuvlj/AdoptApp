@@ -108,7 +108,7 @@ class RegistroActivity : AppCompatActivity() {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(
-                        baseContext, "Authentication failed.",
+                        baseContext, "Autenticación fallida.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

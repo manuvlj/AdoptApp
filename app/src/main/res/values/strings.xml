@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AdoptApp</string>
     <string name="AdoptApp">AdoptApp</string>
-    <string name="autores"><![CDATA[Made with love by Manu]]></string>
+    <string name="autores"><![CDATA[Made with love by Manu & Mateo]]></string>
     <string name="logo">applogo</string>
     <string name="iniciarSesion">Iniciar sesión</string>
     <string name="iniciosesion">Iniciar sesión en AdoptApp</string>

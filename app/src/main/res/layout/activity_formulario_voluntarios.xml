@@ -40,6 +40,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:background="@color/colorAccent"
+            android:gravity="center"
             android:padding="15dp"
             android:text="@string/aviso_formularioVol"
             android:textColor="@color/colorPrimaryDark"
@@ -98,6 +99,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="@string/telefono"
+                android:inputType="number"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,6 +118,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="@string/correo"
+                android:inputType="textEmailAddress"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,7 +180,7 @@
             android:text="@string/envio_formulario"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
