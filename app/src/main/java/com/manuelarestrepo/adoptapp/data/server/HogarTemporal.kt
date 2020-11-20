@@ -4,10 +4,10 @@ data class HogarTemporal(
     val id: String?,
     val nombreHogar: String,
     val apellidoHogar: String,
-    val telefonoHogar: Int,
+    val telefonoHogar: String,
     val correoHogar: String,
     val ciudadHogar: String,
     val direccionHogar: String,
-    val numPerrosHogar: Int,
+    val numPerrosHogar: String,
     val experienciaHogar: String
 )

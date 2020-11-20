@@ -204,6 +204,7 @@
                 android:id="@+id/hembra_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/hembra" />
 
             <RadioButton
@@ -239,6 +240,7 @@
                 android:id="@+id/si_esterili_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/si" />
 
             <RadioButton
@@ -274,6 +276,7 @@
                 android:id="@+id/si_vacunas_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/si" />
 
             <RadioButton

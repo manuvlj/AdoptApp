@@ -190,6 +190,7 @@
                 android:id="@+id/si_hogar_radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/si" />
 
             <RadioButton

@@ -15,6 +15,11 @@ class HogarTempFragment : Fragment() {
 
     private lateinit var binding: FragmentHogarTempBinding
 
+    companion object {
+        private const val EMPTY = ""
+        private const val SPACE = " "
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHogarTempBinding.bind(view)
@@ -23,40 +28,44 @@ class HogarTempFragment : Fragment() {
 
             val nombreHogar = binding.nombreHogarEditText.text.toString()
             val apellidoHogar = binding.apellidosHogarEditText.text.toString()
-            val telefonoHogar = binding.telefonoHogarEditText.text.toString().toInt()
+            val telefonoHogar = binding.telefonoHogarEditText.text.toString()
             val correoHogar = binding.correoHogarEditText.text.toString()
             val ciudadHogar = binding.ciudadHogarSpinner.selectedItem.toString()
             val direccionHogar = binding.direccionHogarEditText.text.toString()
-            val numPerrosHogar = binding.cantidadPerrosEditText.text.toString().toInt()
+            val numPerrosHogar = binding.cantidadPerrosEditText.text.toString()
             val experienciaHogar =
                 if (binding.siHogarRadioButton.isChecked) getString(R.string.si) else getString(R.string.no)
 
-            crearHogarTemporal(
-                nombreHogar,
-                apellidoHogar,
-                telefonoHogar,
-                correoHogar,
-                ciudadHogar,
-                direccionHogar,
-                numPerrosHogar,
-                experienciaHogar
-            )
-            Toast.makeText(
-                activity,
-                "Formulario enviado con éxito. ¡Gracias por ayudar!",
-                Toast.LENGTH_SHORT
-            ).show()
+            if (nombreHogar == EMPTY || apellidoHogar == EMPTY || telefonoHogar == EMPTY || correoHogar == EMPTY || ciudadHogar == EMPTY || direccionHogar == EMPTY || numPerrosHogar == EMPTY) {
+                Toast.makeText(activity, "Ingrese todos los datos", Toast.LENGTH_SHORT).show()
+            } else {
+                crearHogarTemporal(
+                    nombreHogar,
+                    apellidoHogar,
+                    telefonoHogar,
+                    correoHogar,
+                    ciudadHogar,
+                    direccionHogar,
+                    numPerrosHogar,
+                    experienciaHogar
+                )
+                Toast.makeText(
+                    activity,
+                    "Formulario enviado con éxito. ¡Gracias por ayudar!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 
     private fun crearHogarTemporal(
         nombreHogar: String,
         apellidoHogar: String,
-        telefonoHogar: Int,
+        telefonoHogar: String,
         correoHogar: String,
         ciudadHogar: String,
         direccionHogar: String,
-        numPerrosHogar: Int,
+        numPerrosHogar: String,
         experienciaHogar: String
     ) {
         val database = FirebaseDatabase.getInstance()

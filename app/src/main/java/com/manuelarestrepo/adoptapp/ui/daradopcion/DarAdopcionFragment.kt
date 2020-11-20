@@ -15,6 +15,11 @@ class DarAdopcionFragment : Fragment() {
 
     private lateinit var binding: FragmentDarAdopcionBinding
 
+    companion object {
+        private const val EMPTY = ""
+        private const val SPACE = " "
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,7 +42,7 @@ class DarAdopcionFragment : Fragment() {
 
             //Datos del perro que se quiere dar en adopcion
             val nombrePerroDar = binding.nombrePerroDarEditText.text.toString()
-            val edadPerroDar = binding.edadPerroDarEditText.text.toString().toInt()
+            val edadPerroDar = binding.edadPerroDarEditText.text.toString()
             val tamanoPerroDar = binding.tamanoSpinner.selectedItem.toString()
             val sexoPerroDar =
                 if (binding.hembraRadioButton.isChecked) getString(R.string.hembra) else getString(R.string.macho)
@@ -47,19 +52,23 @@ class DarAdopcionFragment : Fragment() {
                 if (binding.siVacunasRadioButton.isChecked) getString(R.string.si) else getString(R.string.no)
             val justificacion = binding.justificacionEditText.text.toString()
 
-            crearDarEnAdopcion(
-                nombrePropietario,
-                apellidoPropietario,
-                correoPropietario,
-                nombrePerroDar,
-                edadPerroDar,
-                tamanoPerroDar,
-                sexoPerroDar,
-                esterilizadoPerroDar,
-                vacunasPerroDar,
-                justificacion
-            )
-            Toast.makeText(activity, "Formulario enviado con éxito", Toast.LENGTH_SHORT).show()
+            if (nombrePropietario == EMPTY || apellidoPropietario == EMPTY || correoPropietario == EMPTY || nombrePerroDar == EMPTY || edadPerroDar == EMPTY || tamanoPerroDar == EMPTY || sexoPerroDar == EMPTY || vacunasPerroDar == EMPTY) {
+                Toast.makeText(activity, "Ingrese todos los datos", Toast.LENGTH_SHORT).show()
+            } else {
+                crearDarEnAdopcion(
+                    nombrePropietario,
+                    apellidoPropietario,
+                    correoPropietario,
+                    nombrePerroDar,
+                    edadPerroDar,
+                    tamanoPerroDar,
+                    sexoPerroDar,
+                    esterilizadoPerroDar,
+                    vacunasPerroDar,
+                    justificacion
+                )
+                Toast.makeText(activity, "Formulario enviado con éxito", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -68,7 +77,7 @@ class DarAdopcionFragment : Fragment() {
         apellidoPropietario: String,
         correoPropietario: String,
         nombrePerroDar: String,
-        edadPerroDar: Int,
+        edadPerroDar: String,
         tamanoPerroDar: String,
         sexoPerroDar: String,
         esterilizadoPerroDar: String,
