@@ -24,7 +24,12 @@ class FormularioVoluntariosActivity : AppCompatActivity() {
             val direccion = direccion_voluntarios_edit_text.text.toString()
             val ciudad = ciudad_voluntarios_spinner.selectedItem.toString()
 
-            crearVoluntarioEnFirebase(nombre, apellido, telefono, correo, direccion, ciudad)
+            if (nombre.isEmpty() || apellido.isEmpty() || telefono.isEmpty() || correo.isEmpty() || correo.isEmpty() || direccion.isEmpty()) {
+                Toast.makeText(this, "Ingrese todos los datos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                crearVoluntarioEnFirebase(nombre, apellido, telefono, correo, direccion, ciudad)
+            }
         }
     }
 
