@@ -2,7 +2,6 @@
 
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,8 +42,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombre_dar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextAppearance="@style/TextLabel">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nombre_dar_editText"
@@ -64,8 +62,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/apellido_dar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextAppearance="@style/TextLabel">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/apellido_dar_editText"
@@ -83,8 +80,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/correo_dar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextAppearance="@style/TextLabel">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/correo_dar_editText"
@@ -117,8 +113,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombrePerro_dar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextAppearance="@style/TextLabel">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nombrePerro_dar_editText"
@@ -137,8 +132,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edadPerro_dar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextAppearance="@style/TextLabel">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edadPerro_dar_editText"

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.manuelarestrepo.adoptapp.R
+import com.manuelarestrepo.adoptapp.ui.mapas.MapsActivity
 import kotlinx.android.synthetic.main.fragment_voluntarios.*
 
 class VoluntariosFragment : Fragment() {
@@ -24,6 +25,11 @@ class VoluntariosFragment : Fragment() {
 
         inscribete_button.setOnClickListener {
             val intent = Intent(context, FormularioVoluntariosActivity::class.java)
+            startActivity(intent)
+        }
+
+        mapa_button.setOnClickListener {
+            val intent = Intent(context, MapsActivity::class.java)
             startActivity(intent)
         }
     }

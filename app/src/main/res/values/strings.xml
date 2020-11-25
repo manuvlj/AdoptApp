@@ -119,4 +119,5 @@
         <item>Mediano</item>
         <item>Grande</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>
