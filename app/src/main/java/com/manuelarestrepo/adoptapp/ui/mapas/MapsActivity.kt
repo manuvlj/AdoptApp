@@ -61,7 +61,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPoiCli
                         mMap.addMarker(
                             MarkerOptions()
                                 .position(LatLng(refugios.latitud, refugios.longitud))
-                                .title(refugios.nombreRefugio)
+                                .title(refugios.nombre)
                                 .snippet(refugios.telefono)
                         )
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, 17f))

@@ -120,4 +120,14 @@
         <item>Grande</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="volver">Volver</string>
+    <string name="imagenPerfil">imagenPerfil</string>
+    <string name="cambiar_contrasena">Cambiar contraseña</string>
+    <string name="antigua_contrasena">Antigua contraseña</string>
+    <string name="nueva_contrasena">Nueva contraseña</string>
+    <string name="imagen_noticia">imagen_noticia</string>
+    <string name="titulo_noticia">¿Por qué adoptar un perro?</string>
+    <string name="cuerpo_noticia">El verano ha llegado y el número de perros abandonados por dueños que no saben que hacer con su mascota aumenta considerablemente. Los perros con suerte serán encontrados y llevados a refugios y otros tendrán un final trágico. Algunos incluso han sido cruelmente maltratados y explotados, se merecen una segunda oportunidad...</string>
+    <string name="ver_mas_noticia">Ver más</string>
 </resources>
