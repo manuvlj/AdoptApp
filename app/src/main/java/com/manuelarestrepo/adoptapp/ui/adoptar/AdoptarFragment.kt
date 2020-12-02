@@ -70,7 +70,6 @@ class AdoptarFragment : Fragment(), AdoptarRVAdapter.OnItemClickListener {
             }
         }
         myPerrosRef.addValueEventListener(postListener)
-
     }
 
     override fun onItemClick(perro: Perro) {
