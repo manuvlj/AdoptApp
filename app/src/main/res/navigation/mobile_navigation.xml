@@ -9,7 +9,11 @@
         android:id="@+id/nav_adoptar"
         android:name="com.manuelarestrepo.adoptapp.ui.adoptar.AdoptarFragment"
         android:label="Adoptar"
-        tools:layout="@layout/fragment_adoptar" />
+        tools:layout="@layout/fragment_adoptar">
+        <action
+            android:id="@+id/action_nav_adoptar_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_darAdopcion"
         android:name="com.manuelarestrepo.adoptapp.ui.daradopcion.DarAdopcionFragment"
@@ -35,4 +39,13 @@
         android:name="com.manuelarestrepo.adoptapp.ui.miperfil.Miperfil"
         android:label="Mi perfil"
         tools:layout="@layout/fragment_miperfil" />
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.detalle.DetalleFragment"
+        android:label="@string/detalle_bar_name"
+        tools:layout="@layout/fragment_detalle">
+        <argument
+            android:name="perroSeleccionado"
+            app:argType="com.manuelarestrepo.adoptapp.data.server.Perro" />
+    </fragment>
 </navigation>

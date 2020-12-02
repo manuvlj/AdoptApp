@@ -130,4 +130,5 @@
     <string name="titulo_noticia">¿Por qué adoptar un perro?</string>
     <string name="cuerpo_noticia">El verano ha llegado y el número de perros abandonados por dueños que no saben que hacer con su mascota aumenta considerablemente. Los perros con suerte serán encontrados y llevados a refugios y otros tendrán un final trágico. Algunos incluso han sido cruelmente maltratados y explotados, se merecen una segunda oportunidad...</string>
     <string name="ver_mas_noticia">Ver más</string>
+    <string name="detalle_bar_name">Conocer más</string>
 </resources>

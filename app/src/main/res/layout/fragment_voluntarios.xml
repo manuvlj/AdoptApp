@@ -14,14 +14,6 @@
         android:orientation="vertical"
         tools:context=".ui.voluntarios.VoluntariosFragment">
 
-        <ImageView
-            android:id="@+id/voluntario_imageView"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_margin="20dp"
-            android:contentDescription="@string/imgVoluntario"
-            app:srcCompat="@drawable/voluntario" />
-
         <TextView
             android:id="@+id/texto_voluntarios_textView"
             android:layout_width="match_parent"

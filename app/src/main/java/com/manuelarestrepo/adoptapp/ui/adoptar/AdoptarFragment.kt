@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -15,7 +16,9 @@ import com.manuelarestrepo.adoptapp.R
 import com.manuelarestrepo.adoptapp.data.server.Perro
 import com.manuelarestrepo.adoptapp.databinding.FragmentAdoptarBinding
 
-class AdoptarFragment : Fragment() {
+//import androidx.navigation.fragment.findNavController
+
+class AdoptarFragment : Fragment(), AdoptarRVAdapter.OnItemClickListener {
 
     private lateinit var binding: FragmentAdoptarBinding
     var listPerros: MutableList<Perro> = mutableListOf()
@@ -37,7 +40,7 @@ class AdoptarFragment : Fragment() {
         binding.adoptarRecyclerView.setHasFixedSize(true)
 
 
-        adoptarRVAdapter = AdoptarRVAdapter(listPerros as ArrayList<Perro>)
+        adoptarRVAdapter = AdoptarRVAdapter(listPerros as ArrayList<Perro>, this@AdoptarFragment)
 
         binding.adoptarRecyclerView.adapter = adoptarRVAdapter
 
@@ -68,5 +71,10 @@ class AdoptarFragment : Fragment() {
         }
         myPerrosRef.addValueEventListener(postListener)
 
+    }
+
+    override fun onItemClick(perro: Perro) {
+        val action = AdoptarFragmentDirections.actionNavAdoptarToDetalleFragment(perro)
+        findNavController().navigate(action)
     }
 }

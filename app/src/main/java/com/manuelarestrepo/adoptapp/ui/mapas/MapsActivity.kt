@@ -92,7 +92,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPoiCli
         Toast.makeText(this, "Nombre: ${poi?.name}", Toast.LENGTH_SHORT).show()
     }
 
-    override fun onBackPressed() {
+    //override fun onBackPressed() {
 
-    }
+    //}
 }
