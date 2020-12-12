@@ -46,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
                     val intent = Intent(this, DrawerActivity::class.java)
+                    intent.putExtra("correo", correoLogin)
                     startActivity(intent)
                     finish()
 

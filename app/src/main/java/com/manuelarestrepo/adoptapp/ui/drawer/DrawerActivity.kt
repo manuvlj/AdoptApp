@@ -16,8 +16,14 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.manuelarestrepo.adoptapp.R
+import com.manuelarestrepo.adoptapp.data.server.Usuario
 import com.manuelarestrepo.adoptapp.ui.login.LoginActivity
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 
 class DrawerActivity : AppCompatActivity() {
 
@@ -29,6 +35,9 @@ class DrawerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_drawer)
         supportActionBar?.hide()
 
+        val datosRecibidos = intent.extras
+        val correo = datosRecibidos?.getString("correo")
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -38,13 +47,42 @@ class DrawerActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_inicio, R.id.nav_adoptar, R.id.nav_darAdopcion, R.id.nav_hogarTemp, R.id.nav_voluntarios, R.id.nav_miPerfil
+                R.id.nav_inicio,
+                R.id.nav_adoptar,
+                R.id.nav_darAdopcion,
+                R.id.nav_hogarTemp,
+                R.id.nav_voluntarios,
+                R.id.nav_miPerfil
 
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+        val headerView = navView.getHeaderView(0)
+
+        val database = FirebaseDatabase.getInstance()
+        val myUsuarioRef = database.getReference("usuarios")
+
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (data: DataSnapshot in snapshot.children) {
+                    val usuario = data.getValue(Usuario::class.java)
+                    if (usuario?.correo.equals(correo)) {
+                        headerView.nombre_header_text_view.text = usuario?.nombre
+                        headerView.correo_header_text_view.text = usuario?.correo
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        }
+        myUsuarioRef.addValueEventListener(postListener)
+
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)

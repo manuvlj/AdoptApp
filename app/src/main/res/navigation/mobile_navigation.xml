@@ -28,7 +28,11 @@
         android:id="@+id/nav_inicio"
         android:name="com.manuelarestrepo.adoptapp.ui.inicio.InicioFragment"
         android:label="Inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_nav_inicio_to_noticiaDetalleFragment"
+            app:destination="@id/noticiaDetalleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_voluntarios"
         android:name="com.manuelarestrepo.adoptapp.ui.voluntarios.VoluntariosFragment"
@@ -47,5 +51,14 @@
         <argument
             android:name="perroSeleccionado"
             app:argType="com.manuelarestrepo.adoptapp.data.server.Perro" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticiaDetalleFragment"
+        android:name="com.manuelarestrepo.adoptapp.ui.detalle.NoticiaDetalleFragment"
+        android:label="@string/noticia_detalle_bar_name"
+        tools:layout="@layout/fragment_noticia_detalle">
+        <argument
+            android:name="noticiaSeleccionada"
+            app:argType="com.manuelarestrepo.adoptapp.data.server.Noticia" />
     </fragment>
 </navigation>

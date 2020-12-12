@@ -17,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val timer = Timer()
+        val intent = Intent(this, DrawerActivity::class.java)
         timer.schedule(
             timerTask {
                 //super.onStart()
@@ -25,14 +26,16 @@ class SplashActivity : AppCompatActivity() {
                 if (auth == null) {
                     goToLoginActivity()
                 } else {
-                    goToDrawerActivity()
+
+                    goToDrawerActivity(auth.email.toString(), auth.uid)
                 }
             }, 2000
         )
     }
 
-    private fun goToDrawerActivity() {
+    private fun goToDrawerActivity(mail: String, id: String) {
         val intent = Intent(this, DrawerActivity::class.java)
+        intent.putExtra("correo", mail)
         startActivity(intent)
         finish()
     }

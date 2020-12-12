@@ -63,8 +63,6 @@
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -120,8 +118,8 @@
         <item>Grande</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
-    <string name="guardar_cambios">Guardar cambios</string>
-    <string name="volver">Volver</string>
+    <string name="actualizar_perfil">Actualizar perfil</string>
+    <string name="actualizar_password">Actualizar contraseña</string>
     <string name="imagenPerfil">imagenPerfil</string>
     <string name="cambiar_contrasena">Cambiar contraseña</string>
     <string name="antigua_contrasena">Antigua contraseña</string>
@@ -131,4 +129,7 @@
     <string name="cuerpo_noticia">El verano ha llegado y el número de perros abandonados por dueños que no saben que hacer con su mascota aumenta considerablemente. Los perros con suerte serán encontrados y llevados a refugios y otros tendrán un final trágico. Algunos incluso han sido cruelmente maltratados y explotados, se merecen una segunda oportunidad...</string>
     <string name="ver_mas_noticia">Ver más</string>
     <string name="detalle_bar_name">Conocer más</string>
+    <string name="descripcion_noticia">Aqui se tendra una pequenia descripcion de la noticia, la cual sera de un maximo de 5 lineas, y termina con la opcion de continuar leyendo o algo asi...</string>
+    <string name="titulo_noticia_ejemplo">Aqui ira el titulo de la noticia</string>
+    <string name="noticia_detalle_bar_name">"Noticias"</string>
 </resources>

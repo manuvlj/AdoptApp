@@ -1,62 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:orientation="horizontal"
     tools:context=".ui.miperfil.Miperfil">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noticias_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-    <TextView
-            android:id="@+id/titulo_noticia_textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/dosis_semibold"
-            android:text="@string/titulo_noticia"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/cuerpo_noticia_textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/dosis_semibold"
-            android:padding="15dp"
-            android:text="@string/cuerpo_noticia"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/mas_noticia_button"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/dosis_semibold"
-            android:text="@string/ver_mas_noticia"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/noticia_list_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

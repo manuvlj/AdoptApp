@@ -31,9 +31,9 @@ class RegistroActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         registro_button.setOnClickListener {
-            val nombre= nombre_header.text.toString()
+            val nombre = nombre_header_text_view.text.toString()
             val apellido = apellidoRegistro_text.text.toString()
-            val correo = correo_header.text.toString()
+            val correo = correo_header_text_view.text.toString()
             val telefono = telefonoRegistro_text.text.toString()
             val contrasena = contrasenaRegistro_text.text.toString()
             val repContrasena = repContrasena_text.text.toString()
