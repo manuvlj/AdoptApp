@@ -132,4 +132,5 @@
     <string name="descripcion_noticia">Aqui se tendra una pequenia descripcion de la noticia, la cual sera de un maximo de 5 lineas, y termina con la opcion de continuar leyendo o algo asi...</string>
     <string name="titulo_noticia_ejemplo">Aqui ira el titulo de la noticia</string>
     <string name="noticia_detalle_bar_name">"Noticias"</string>
+    <string name="adoptame">A D O P T A M E</string>
 </resources>

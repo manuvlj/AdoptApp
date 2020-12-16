@@ -52,6 +52,7 @@
         android:layout_marginTop="@android:dimen/thumbnail_height"
         android:contentDescription="@string/logo"
         android:foregroundGravity="center_vertical|center_horizontal"
+        android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

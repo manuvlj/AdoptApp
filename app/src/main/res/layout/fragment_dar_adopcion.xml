@@ -305,6 +305,7 @@
             android:layout_marginBottom="10dp"
             android:background="@color/colorAccent"
             android:text="@string/elegir"
+            android:fontFamily="@font/dosis_semibold"
             android:textAllCaps="false" />
 
         <TextView
@@ -350,6 +351,7 @@
             android:background="@color/colorAccent"
             android:text="@string/envio_formulario"
             android:textAllCaps="false"
+            android:fontFamily="@font/dosis_semibold"
             android:textColor="@color/colorPrimaryDark" />
 
         <ImageView

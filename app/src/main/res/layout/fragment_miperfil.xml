@@ -12,19 +12,11 @@
         android:orientation="vertical"
         android:paddingBottom="20dp">
 
-        <ImageView
-            android:id="@+id/perfil_imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="@string/imagenPerfil"
-            android:src="@drawable/logo_black" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombre_perfil_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nombre_perfil_editText"
@@ -32,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
@@ -120,6 +113,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/cambiar_contrasena"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputLayout

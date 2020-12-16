@@ -30,6 +30,7 @@ class AdoptarFragment : Fragment(), AdoptarRVAdapter.OnItemClickListener {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_adoptar, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,6 +48,7 @@ class AdoptarFragment : Fragment(), AdoptarRVAdapter.OnItemClickListener {
         cargarDesdeFirebase()
 
         adoptarRVAdapter.notifyDataSetChanged()
+
 
     }
 
@@ -75,5 +77,6 @@ class AdoptarFragment : Fragment(), AdoptarRVAdapter.OnItemClickListener {
     override fun onItemClick(perro: Perro) {
         val action = AdoptarFragmentDirections.actionNavAdoptarToDetalleFragment(perro)
         findNavController().navigate(action)
+
     }
 }

@@ -31,9 +31,9 @@ class RegistroActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         registro_button.setOnClickListener {
-            val nombre = nombre_header_text_view.text.toString()
+            val nombre = repContrasena_text.text.toString()
             val apellido = apellidoRegistro_text.text.toString()
-            val correo = correo_header_text_view.text.toString()
+            val correo = correo_header.text.toString()
             val telefono = telefonoRegistro_text.text.toString()
             val contrasena = contrasenaRegistro_text.text.toString()
             val repContrasena = repContrasena_text.text.toString()
@@ -51,7 +51,7 @@ class RegistroActivity : AppCompatActivity() {
                     darAdopcion_textView.text = getString(R.string.error3)
 
                 else if(!condiciones_checkBox.isChecked)
-                        darAdopcion_textView.text = getString(R.string.error4)
+                    darAdopcion_textView.text = getString(R.string.error4)
 
                 else {
                     registroEnFirebase(
@@ -108,7 +108,7 @@ class RegistroActivity : AppCompatActivity() {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(
-                        baseContext, "Autenticación fallida.",
+                        baseContext, "El correo ingresado ya se encuentra registrado",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

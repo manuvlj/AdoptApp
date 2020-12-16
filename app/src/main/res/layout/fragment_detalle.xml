@@ -1,100 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.detalle.DetalleFragment">
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/foto_detalle_image_view"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:baselineAlignBottom="false"
-        android:contentDescription="@null" />
-
-    <TextView
-        android:id="@+id/nombre_detalle_text_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:text="@string/AdoptApp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="36sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.detalle.DetalleFragment">
 
-    <TextView
-        android:id="@+id/edad_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/nombre_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dosis_semibold"
+            android:gravity="center"
+            android:text="@string/AdoptApp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/sexo_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/foto_detalle_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@null" />
 
-    <TextView
-        android:id="@+id/tamano_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/edad_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/ciudad_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/sexo_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/esterilizado_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tamano_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/vacunado_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/ciudad_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/saludable_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/esterilizado_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/caracteristicas_detalle_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/dosis_semibold"
-        android:gravity="center"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/vacunado_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/saludable_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/caracteristicas_detalle_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="start"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/adoptame_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:text="@string/adoptame"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

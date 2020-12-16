@@ -45,6 +45,8 @@ class AdoptarRVAdapter(
 
             binding.itemCardView.setOnClickListener {
                 onItemClickListener.onItemClick(perro)
+
+
             }
         }
     }
