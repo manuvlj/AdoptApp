@@ -15,6 +15,7 @@
         tools:context=".ui.voluntarios.VoluntariosFragment">
 
         <ImageView
+            app:srcCompat="@drawable/ic_menu_huella"
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="272dp"
@@ -22,7 +23,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            app:srcCompat="@drawable/voluntario" />
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/texto_voluntarios_textView"
